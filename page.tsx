@@ -387,7 +387,7 @@ const faqs = [
   ],
   [
     "What is the cancellation policy?",
-    "The deposit is refundable when cancellation is made more than 72 hours before the trip. Within 72 hours, the deposit is non-refundable. Rescheduling is allowed subject to availability; message us on WhatsApp to confirm any fee or deadline.",
+    "The deposit is refundable when cancellation is made more than 72 hours before the trip. Within 72 hours, the deposit is non-refundable. Refunds are processed within 3 business days. Rescheduling is allowed subject to availability; message us on WhatsApp to confirm any fee or deadline.",
   ],
   [
     "How quickly will I receive my custom plan?",
@@ -426,6 +426,7 @@ const guestInformation = [
     items: [
       "Cancellation more than 72 hours before the trip: the deposit is refundable.",
       "Cancellation within 72 hours: the deposit is non-refundable.",
+      "Refunds are processed within 3 business days, and our team is reachable 9:00 AM–9:00 PM Bali time (WITA) for any questions during that time.",
       "Rescheduling is allowed, subject to availability.",
     ],
   },
@@ -1130,16 +1131,10 @@ export default function Home() {
                 "Umbrella",
                 "Small first-aid kit",
                 "Trash bag",
+                "Sanitary pads",
               ].map((item) => (
                 <span key={item}>✓ {item}</span>
               ))}
-            </div>
-            <div className="special">
-              <b>✿</b>
-              <span>
-                <strong>Sanitary pads are available in the car.</strong>
-                <small>A simple comfort detail for guests who need them.</small>
-              </span>
             </div>
           </div>
         </div>
@@ -1194,6 +1189,10 @@ export default function Home() {
               <div>
                 <span>Within 72 hours of the trip</span>
                 <strong>The deposit is non-refundable.</strong>
+              </div>
+              <div>
+                <span>Refund processing time</span>
+                <strong>Within 3 business days, 9:00 AM–9:00 PM Bali time (WITA)</strong>
               </div>
               <div>
                 <span>Rescheduling</span>
