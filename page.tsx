@@ -188,10 +188,6 @@ const nusaPackages: TourPackage[] = [
       "Insurance coverage",
       "Mineral water",
     ],
-    placeholders: [
-      "CONFIRM HOTEL PICKUP AREAS",
-      "CONFIRM INSURANCE COVERAGE DETAILS",
-    ],
   },
   {
     name: "East Nusa Penida Island Tour",
@@ -224,10 +220,6 @@ const nusaPackages: TourPackage[] = [
       "English-speaking driver or guide",
       "Insurance coverage",
       "Mineral water",
-    ],
-    placeholders: [
-      "CONFIRM HOTEL PICKUP AREAS",
-      "CONFIRM INSURANCE COVERAGE DETAILS",
     ],
   },
   {
@@ -270,11 +262,7 @@ const nusaPackages: TourPackage[] = [
     notices: [
       "Snorkeling and island-tour locations may be changed or cancelled because of weather, sea conditions, road conditions, timing, or safety concerns.",
     ],
-    placeholders: [
-      "CONFIRM WHETHER SNORKELING EQUIPMENT AND TOWELS ARE INCLUDED",
-      "CONFIRM HOTEL PICKUP AREAS",
-      "CONFIRM INSURANCE COVERAGE DETAILS",
-    ],
+    
   },
 ];
 
@@ -318,14 +306,7 @@ const seranganPackage: TourPackage = {
     "This price is for a private package for one guest.",
     "Water sports are available at the beach club. Complimentary access is not confirmed.",
   ],
-  placeholders: [
-    "CONFIRM WHETHER HOTEL TRANSFER IS INCLUDED",
-    "CONFIRM WHETHER WATER SPORTS REQUIRE AN ADDITIONAL PAYMENT",
-    "CONFIRM BOAT DEPARTURE AND RETURN TIMES",
-    "CONFIRM WHETHER BEACH-CLUB ACCESS DEPENDS ON OPERATING CONDITIONS",
-    "CONFIRM INSURANCE COVERAGE",
-    "CONFIRM PRICE FOR TWO OR MORE GUESTS",
-  ],
+ 
 };
 
 const jeepPackages = [
@@ -338,7 +319,6 @@ const jeepPackages = [
       "Black Sand",
       "Mount Batur area entrance tickets",
     ],
-    placeholder: "CONFIRM EXACT STARTING TIME AND DURATION",
   },
   {
     name: "Sunset Jeep Trip",
@@ -351,7 +331,7 @@ const jeepPackages = [
       "Coffee and snacks",
       "Mount Batur area entrance tickets",
     ],
-    placeholder: "CONFIRM EXACT STARTING TIME AND DURATION",
+    
   },
   {
     name: "Sunrise Jeep Trip",
@@ -364,7 +344,7 @@ const jeepPackages = [
       "Breakfast",
       "Mount Batur area entrance tickets",
     ],
-    placeholder: "CONFIRM EXACT PICKUP OR MEETING TIME",
+   
   },
 ];
 
@@ -465,10 +445,6 @@ const guestInformation = [
       "Cancellation more than 72 hours before the trip: the deposit is refundable.",
       "Cancellation within 72 hours: the deposit is non-refundable.",
       "Rescheduling is allowed, subject to availability.",
-      "[ADD REFUND PROCESS AND PROCESSING TIME]",
-      "[ADD WEATHER CANCELLATION POLICY]",
-      "[ADD LATE ARRIVAL POLICY]",
-      "[ADD NO-SHOW POLICY]",
     ],
   },
   {
@@ -476,10 +452,7 @@ const guestInformation = [
     items: [
       "The exact pickup point and departure details will be confirmed after booking.",
       "Bring suitable clothing and footwear, sun protection, required personal medication, and activity-specific equipment when advised.",
-      "[ADD PICKUP INSTRUCTIONS]",
-      "[ADD WAITING TIME]",
-      "[ADD IDENTIFICATION REQUIREMENTS]",
-      "[ADD CHILD-SEAT AVAILABILITY]",
+     
     ],
   },
   {
@@ -487,16 +460,14 @@ const guestInformation = [
     items: [
       "Disclose medical, mobility, pregnancy, allergy, accessibility, and dietary requirements before confirmation.",
       "English, Indonesian, Simplified Chinese, Russian, Japanese, and Korean are available.",
-      "[ADD ACCESSIBILITY INFORMATION BY TOUR]",
-      "[ADD DIETARY ACCOMMODATION PROCESS]",
+     
     ],
   },
   {
     title: "Photography and belongings",
     items: [
       "Guests are responsible for personal belongings unless otherwise required by applicable law.",
-      "[ADD PHOTOGRAPHY AND IMAGE-USE POLICY]",
-      "[ADD LOST-PROPERTY REPORTING AND RETURN PROCESS]",
+     
     ],
   },
   {
@@ -1202,7 +1173,7 @@ export default function Home() {
             <div className="special">
               <b>✿</b>
               <span>
-                <strong>Sanitary pads are available in the car.</strong>
+                <small>Sanitary pads are available in the car.</small>
                 <small>A simple comfort detail for guests who need them.</small>
               </span>
             </div>
@@ -1265,9 +1236,7 @@ export default function Home() {
                 <strong>Allowed, subject to availability.</strong>
               </div>
             </div>
-            <PlaceholderList
-              items={["CONFIRM WHETHER A RESCHEDULING FEE OR TIME LIMIT APPLIES"]}
-            />
+           
           </article>
         </div>
       </section>
@@ -1364,15 +1333,13 @@ export default function Home() {
             <span className="trustIcon">02</span>
             <h3>Local perspective</h3>
             <p>Chelyn plans each route around the guest’s timing, interests, comfort, and safety needs.</p>
-            <b>[ADD GUIDE EXPERIENCE OR PROFESSIONAL CREDENTIALS, IF APPLICABLE]</b>
+          
           </article>
           <article>
             <span className="trustIcon">03</span>
             <h3>Credentials and partners</h3>
             <p>Business or partner claims will remain unpublished until documentation is available.</p>
-            <b>[ADD BUSINESS REGISTRATION OR LICENSE INFORMATION]</b>
-            <b>[ADD SAFETY CERTIFICATIONS]</b>
-            <b>[ADD VERIFIED HOTEL OR TOURISM PARTNERS]</b>
+           
           </article>
           <article>
             <span className="trustIcon">04</span>
