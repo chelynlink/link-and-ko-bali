@@ -80,7 +80,6 @@ type TourPackage = {
   destinations?: string[];
   inclusions: string[];
   notices?: string[];
-  placeholders?: string[];
 };
 
 const nusaPackages: TourPackage[] = [
@@ -109,13 +108,11 @@ const nusaPackages: TourPackage[] = [
       "Towel",
       "Lunch",
       "English-speaking driver or guide",
-      "Insurance coverage",
       "Mineral water",
     ],
     notices: [
       "Snorkeling locations are subject to weather, sea conditions, and safety considerations. Manta sightings cannot be guaranteed.",
     ],
-    placeholders?: [],
   },
   {
     name: "Combination West and East One-Day Island Tour",
@@ -125,7 +122,6 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,499,000",
     priceBasis: "Per person",
     starting: true,
-    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Island sightseeing", "Beach and viewpoint stops", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car in Nusa Penida are listed as included.",
     meals: "À la carte lunch and mineral water are listed as included.",
@@ -144,13 +140,11 @@ const nusaPackages: TourPackage[] = [
       "À la carte lunch",
       "Entrance fees",
       "English-speaking driver or guide",
-      "Insurance coverage",
       "Mineral water",
     ],
     notices: [
       "The itinerary may be adjusted because of traffic, weather, harbour operations, road conditions, or safety considerations.",
     ],
-    placeholders?: 
   },
   {
     name: "West Nusa Penida Island Tour",
@@ -160,7 +154,6 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,350,000",
     priceBasis: "Per person",
     childDiscount: "20% discount for children aged 0–3 years",
-    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Island sightseeing", "Beach and cliff viewpoints", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car with fuel are listed as included.",
     meals: "Restaurant lunch and mineral water are listed as included.",
@@ -181,7 +174,6 @@ const nusaPackages: TourPackage[] = [
       "Fuel",
       "Entrance tickets for the listed destinations",
       "English-speaking driver or guide",
-      "Insurance coverage",
       "Mineral water",
     ],
   },
@@ -193,7 +185,6 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,450,000",
     priceBasis: "Per person",
     childDiscount: "20% discount for children aged 0–3 years",
-    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Island sightseeing", "Beach and viewpoint stops", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car with fuel are listed as included.",
     meals: "Restaurant lunch and mineral water are listed as included.",
@@ -214,7 +205,6 @@ const nusaPackages: TourPackage[] = [
       "Fuel",
       "Entrance tickets for the listed destinations",
       "English-speaking driver or guide",
-      "Insurance coverage",
       "Mineral water",
     ],
   },
@@ -226,7 +216,6 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,650,000",
     priceBasis: "Per person",
     childDiscount: "20% discount for children aged 0–3 years",
-    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Snorkeling", "Island sightseeing", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car with fuel are listed as included.",
     meals: "Restaurant lunch and mineral water are listed as included.",
@@ -252,13 +241,11 @@ const nusaPackages: TourPackage[] = [
       "Fuel",
       "Entrance tickets for the listed destinations",
       "English-speaking driver or guide",
-      "Insurance coverage",
       "Mineral water",
     ],
     notices: [
       "Snorkeling and island-tour locations may be changed or cancelled because of weather, sea conditions, road conditions, timing, or safety concerns.",
     ],
-    
   },
 ];
 
@@ -271,13 +258,13 @@ const seranganPackage: TourPackage = {
   badge: "Daily Departure",
   departure: "Serangan Harbour → private jetty in Nusa Penida",
   priceBasis: "Private package price shown for one guest",
-  guestRange: "One guest at the displayed price; pricing for two or more guests must be confirmed.",
+  guestRange: "One guest at the displayed price; pricing for two or more guests confirmed on WhatsApp.",
   availability: "Daily departure",
   activities: ["Island sightseeing", "Lunch", "Beach-club access"],
-  transport: "Return boat ticket and a private car in Nusa Penida are included. Hotel transfer is not yet confirmed.",
+  transport: "Return boat ticket and a private car in Nusa Penida are included.",
   meals: "Lunch is listed as included.",
   tickets: "Nusa Penida entrance fee is listed as included.",
-  guide: "A driver or guide is not specifically listed and must be confirmed.",
+  guide: "A driver or guide is not specifically listed and can be confirmed on WhatsApp.",
   destinationsTitle: "Suggested itinerary",
   destinations: [
     "Departure from Serangan Harbour",
@@ -300,9 +287,8 @@ const seranganPackage: TourPackage = {
   ],
   notices: [
     "This price is for a private package for one guest.",
-    "Water sports are available at the beach club. Complimentary access is not confirmed.",
+    "Water sports are available at the beach club. Message us on WhatsApp to confirm current access terms.",
   ],
- 
 };
 
 const jeepPackages = [
@@ -327,7 +313,6 @@ const jeepPackages = [
       "Coffee and snacks",
       "Mount Batur area entrance tickets",
     ],
-    
   },
   {
     name: "Sunrise Jeep Trip",
@@ -340,7 +325,6 @@ const jeepPackages = [
       "Breakfast",
       "Mount Batur area entrance tickets",
     ],
-   
   },
 ];
 
@@ -351,7 +335,7 @@ const faqs = [
   ],
   [
     "Are the tours private?",
-    "Private land transportation is available where it is specifically listed. Fast boats and some activities may be shared. [CONFIRM WHICH PACKAGES ARE FULLY PRIVATE OR SHARED]",
+    "Private land transportation is available where it is specifically listed. Fast boats and some activities may be shared. Message us on WhatsApp to confirm which packages are fully private for your dates.",
   ],
   [
     "What is included in the price?",
@@ -363,7 +347,7 @@ const faqs = [
   ],
   [
     "Is transportation included?",
-    "It depends on the package. Only transportation specifically listed under Inclusions is included. Hotel pickup areas and exact meeting points may still require confirmation.",
+    "It depends on the package. Only transportation specifically listed under Inclusions is included. Hotel pickup areas and exact meeting points are confirmed after booking.",
   ],
   [
     "Where will I be picked up?",
@@ -371,7 +355,7 @@ const faqs = [
   ],
   [
     "Can children join?",
-    "Children may join suitable tours under adult supervision. Some Nusa Penida packages list a 20% discount for children aged 0–3. [ADD CHILD-SEAT AVAILABILITY] [CONFIRM ACTIVITY-SPECIFIC AGE RESTRICTIONS]",
+    "Children may join suitable tours under adult supervision. Some Nusa Penida packages list a 20% discount for children aged 0–3. Message us on WhatsApp for child-seat availability and age requirements for specific activities.",
   ],
   [
     "Are the tours suitable for elderly guests?",
@@ -379,15 +363,15 @@ const faqs = [
   ],
   [
     "What happens during bad weather?",
-    "Routes, activities, or departure points may change for safety. [ADD WEATHER CANCELLATION, RESCHEDULING, AND REFUND POLICY]",
+    "Routes, activities, or departure points may change for safety. Message us on WhatsApp for details on rescheduling and refunds in the event of bad weather.",
   ],
   [
     "What should I wear?",
-    "Wear suitable clothing and secure footwear for the selected activities. Bring sun protection and any personal medication. Package-specific equipment requirements must be confirmed before departure.",
+    "Wear suitable clothing and secure footwear for the selected activities. Bring sun protection and any personal medication. Package-specific equipment requirements can be confirmed on WhatsApp.",
   ],
   [
     "Do I need travel insurance?",
-    "Travel insurance is recommended. Some packages list insurance coverage, but the provider, benefits, exclusions, and limits still require confirmation. [ADD GENERAL INSURANCE INFORMATION]",
+    "Travel insurance is recommended and is currently the guest's own responsibility to arrange. Message us on WhatsApp if you have questions about a specific package.",
   ],
   [
     "Can you accommodate dietary restrictions?",
@@ -399,7 +383,7 @@ const faqs = [
   ],
   [
     "What is the cancellation policy?",
-    "The deposit is refundable when cancellation is made more than 72 hours before the trip. Within 72 hours, the deposit is non-refundable. Rescheduling is allowed subject to availability; any fee or deadline still needs confirmation.",
+    "The deposit is refundable when cancellation is made more than 72 hours before the trip. Within 72 hours, the deposit is non-refundable. Rescheduling is allowed subject to availability; message us on WhatsApp to confirm any rescheduling fee or deadline.",
   ],
   [
     "How quickly will I receive my custom plan?",
@@ -420,8 +404,7 @@ const safetyItems = [
   "The operator may refuse participation when a guest’s health, condition, or behaviour creates a safety risk.",
   "Guests are responsible for personal belongings unless otherwise required by applicable law.",
   "Emergency contact during the tour: Chelyn, +62 858-2375-4807.",
-  "Travel insurance is recommended.",
-  "Some package cards list insurance coverage, but the provider, benefits, limits, and exclusions must be confirmed. [ADD INSURANCE INFORMATION]",
+  "Travel insurance is recommended and is currently the guest's own responsibility to arrange unless stated otherwise in your written quotation.",
 ];
 
 const guestInformation = [
@@ -432,7 +415,6 @@ const guestInformation = [
       "We will confirm availability, the final itinerary, price, inclusions, exclusions, and pickup details in writing.",
       "A 30% deposit is required to confirm the reservation. The remaining balance is due on the day of the trip.",
       "Messages are answered during business hours, 9:00 AM–9:00 PM Bali time (WITA).",
-     
     ],
   },
   {
@@ -448,7 +430,6 @@ const guestInformation = [
     items: [
       "The exact pickup point and departure details will be confirmed after booking.",
       "Bring suitable clothing and footwear, sun protection, required personal medication, and activity-specific equipment when advised.",
-     
     ],
   },
   {
@@ -456,14 +437,12 @@ const guestInformation = [
     items: [
       "Disclose medical, mobility, pregnancy, allergy, accessibility, and dietary requirements before confirmation.",
       "English, Indonesian, Simplified Chinese, Russian, Japanese, and Korean are available.",
-     
     ],
   },
   {
     title: "Photography and belongings",
     items: [
       "Guests are responsible for personal belongings unless otherwise required by applicable law.",
-     
     ],
   },
   {
@@ -479,17 +458,6 @@ const guestInformation = [
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
-function PlaceholderList({ items }: { items: string[] }) {
-  return (
-    <Translated><div className="confirmBox">
-      <strong>Details to confirm before publishing</strong>
-      {items.map((item) => (
-        <span key={item}>[{item}]</span>
-      ))}
-    </div></Translated>
-  );
-}
-
 function TourCard({
   tour,
   onRequest,
@@ -497,6 +465,10 @@ function TourCard({
   tour: TourPackage;
   onRequest: (name: string) => void;
 }) {
+  const hasFacts =
+    tour.duration || tour.startFinish || tour.priceBasis || tour.guestRange || tour.availability;
+  const hasReadiness = tour.clothing || tour.activityLevel || tour.ageRestrictions;
+
   return (
     <Translated><article className="tourCard">
       <div className="tourTop">
@@ -518,14 +490,16 @@ function TourCard({
           <b>Departure:</b> {tour.departure}
         </p>
       )}
-      <div className="tourFacts" aria-label={`${tour.name} key details`}>
-        <div><small>Main destination</small><strong>{tour.mainDestination}</strong></div>
-        <div><small>Duration</small><strong>{tour.duration || "[ADD DURATION]"}</strong></div>
-        <div><small>Start and finish</small><strong>{tour.startFinish || "[ADD STARTING AND FINISHING TIME]"}</strong></div>
-        <div><small>Price basis</small><strong>{tour.priceBasis || "[CONFIRM WHETHER PRICE IS PER PERSON OR PER GROUP]"}</strong></div>
-        <div><small>Guest numbers</small><strong>{tour.guestRange || "[ADD MINIMUM AND MAXIMUM NUMBER OF GUESTS]"}</strong></div>
-        <div><small>Availability</small><strong>{tour.availability || "[ADD OPERATING DAYS]"}</strong></div>
-      </div>
+      {hasFacts && (
+        <div className="tourFacts" aria-label={`${tour.name} key details`}>
+          <div><small>Main destination</small><strong>{tour.mainDestination}</strong></div>
+          {tour.duration && <div><small>Duration</small><strong>{tour.duration}</strong></div>}
+          {tour.startFinish && <div><small>Start and finish</small><strong>{tour.startFinish}</strong></div>}
+          {tour.priceBasis && <div><small>Price basis</small><strong>{tour.priceBasis}</strong></div>}
+          {tour.guestRange && <div><small>Guest numbers</small><strong>{tour.guestRange}</strong></div>}
+          {tour.availability && <div><small>Availability</small><strong>{tour.availability}</strong></div>}
+        </div>
+      )}
       <div className="tourDetails">
         {tour.destinations && (
           <div>
@@ -558,11 +532,13 @@ function TourCard({
         <div><b>Entrance tickets</b><span>{tour.tickets}</span></div>
         <div><b>Driver / guide</b><span>{tour.guide}</span></div>
       </div>
-      <div className="readinessGrid">
-        <div><b>Recommended clothing / equipment</b><span>{tour.clothing || "[ADD RECOMMENDED CLOTHING OR EQUIPMENT]"}</span></div>
-        <div><b>Physical activity level</b><span>{tour.activityLevel || "[ADD PHYSICAL ACTIVITY LEVEL]"}</span></div>
-        <div><b>Age restrictions</b><span>{tour.ageRestrictions || "[ADD AGE RESTRICTIONS, IF APPLICABLE]"}</span></div>
-      </div>
+      {hasReadiness && (
+        <div className="readinessGrid">
+          {tour.clothing && <div><b>Recommended clothing / equipment</b><span>{tour.clothing}</span></div>}
+          {tour.activityLevel && <div><b>Physical activity level</b><span>{tour.activityLevel}</span></div>}
+          {tour.ageRestrictions && <div><b>Age restrictions</b><span>{tour.ageRestrictions}</span></div>}
+        </div>
+      )}
       <div className="exclusion">
         <b>Exclusions</b>
         <span>Anything not specifically listed under Inclusions.</span>
@@ -572,7 +548,9 @@ function TourCard({
           {notice}
         </p>
       ))}
-      <PlaceholderList items={tour.placeholders} />
+      <p className="askNote">
+        Have a question about this package? <a href="#contact">Ask us on WhatsApp</a>.
+      </p>
       <button className="btn primary requestBtn" onClick={() => onRequest(tour.name)}>
         Request This Package <Arrow />
       </button>
@@ -1109,11 +1087,6 @@ export default function Home() {
                 </div>
                 <div className="jeepFacts">
                   <span><b>Main destination</b> Mount Batur, Kintamani</span>
-                  <span><b>Duration / schedule</b> [{trip.placeholder}]</span>
-                  <span><b>Availability</b> [ADD OPERATING DAYS]</span>
-                  <span><b>Physical activity</b> [ADD PHYSICAL ACTIVITY LEVEL]</span>
-                  <span><b>Clothing / equipment</b> [ADD RECOMMENDED CLOTHING OR EQUIPMENT]</span>
-                  <span><b>Age restrictions</b> [ADD AGE RESTRICTIONS, IF APPLICABLE]</span>
                 </div>
                 <h4>Inclusions</h4>
                 <ul>
@@ -1125,6 +1098,9 @@ export default function Home() {
                   <b>Not included</b>
                   <span>Full-day private car, hotel transfer, fuel, or a separate driver outside the jeep service.</span>
                 </div>
+                <p className="askNote">
+                  Have a question about timing or requirements? <a href="#contact">Ask us on WhatsApp</a>.
+                </p>
                 <button className="btn ghost" onClick={() => requestPackage(trip.name)}>
                   Request This Package <Arrow />
                 </button>
@@ -1169,7 +1145,7 @@ export default function Home() {
             <div className="special">
               <b>✿</b>
               <span>
-                <small>Sanitary pads are available in the car.</small>
+                <strong>Sanitary pads are available in the car.</strong>
                 <small>A simple comfort detail for guests who need them.</small>
               </span>
             </div>
@@ -1232,7 +1208,10 @@ export default function Home() {
                 <strong>Allowed, subject to availability.</strong>
               </div>
             </div>
-           
+            <p className="askNote">
+              Have a question about rescheduling fees or deadlines?{" "}
+              <a href={activeWhatsAppUrl} target="_blank" rel="noreferrer">Ask us on WhatsApp</a>.
+            </p>
           </article>
         </div>
       </section>
@@ -1245,8 +1224,8 @@ export default function Home() {
               <h2>Know what to expect before you book.</h2>
             </div>
             <p>
-              These details form the practical booking guide. Items still awaiting
-              confirmation are clearly marked and will not be presented as final policy.
+              These details form the practical booking guide. Anything not covered
+              here can be confirmed directly on WhatsApp before booking.
             </p>
           </header>
           <div className="guestInfoGrid">
@@ -1256,9 +1235,7 @@ export default function Home() {
                 <h3>{group.title}</h3>
                 <ul>
                   {group.items.map((item) => (
-                    <li className={item.startsWith("[") ? "pendingDetail" : ""} key={item}>
-                      {item}
-                    </li>
+                    <li key={item}>{item}</li>
                   ))}
                 </ul>
               </article>
@@ -1301,7 +1278,8 @@ export default function Home() {
           <div>
             <b>Emergency and insurance</b>
             <span>
-              Emergency: Chelyn, +62 858-2375-4807. Travel insurance is recommended; confirm any package-specific coverage in writing before booking.
+              Emergency: Chelyn, +62 858-2375-4807. Travel insurance is recommended and is
+              currently the guest's own responsibility to arrange.
             </span>
           </div>
         </div>
@@ -1323,19 +1301,16 @@ export default function Home() {
             <span className="trustIcon">01</span>
             <h3>Guest reviews</h3>
             <p>No testimonials have been invented or published without a source.</p>
-            
           </article>
           <article>
             <span className="trustIcon">02</span>
             <h3>Local perspective</h3>
-            <p>We plans each route around the guest’s timing, interests, comfort, and safety needs.</p>
-          
+            <p>Chelyn plans each route around the guest’s timing, interests, comfort, and safety needs.</p>
           </article>
           <article>
             <span className="trustIcon">03</span>
             <h3>Credentials and partners</h3>
             <p>Business or partner claims will remain unpublished until documentation is available.</p>
-           
           </article>
           <article>
             <span className="trustIcon">04</span>
@@ -1360,7 +1335,6 @@ export default function Home() {
         <div className="contactFacts">
           <div><small>International WhatsApp</small><a href={WHATSAPP_URL} target="_blank" rel="noreferrer">Chelyn · +62 859-5931-3339</a></div>
           <div><small>Indonesia / Tamu lokal</small><a href={ERIKO_WHATSAPP_URL} target="_blank" rel="noreferrer">Eriko · +62 896-3686-7215</a></div>
-          <div><small>Email</small><strong>[ADD EMAIL ADDRESS]</strong></div>
           <div><small>Business hours</small><strong>9:00 AM–9:00 PM Bali time (WITA)</strong></div>
           <div><small>Expected response</small><strong>Messages are answered during business hours</strong></div>
           <div><small>Service area</small><strong>Bali, including selected Nusa Penida and Kintamani services</strong></div>
@@ -1538,7 +1512,7 @@ export default function Home() {
                   required
                   value={tripInterest}
                   onChange={(event) => setTripInterest(event.target.value)}
-                  placeholder?="Places or package you are interested in"
+                  placeholder="Places or package you are interested in"
                 />
               </label>
               <label>
