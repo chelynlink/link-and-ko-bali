@@ -80,7 +80,7 @@ type TourPackage = {
   destinations?: string[];
   inclusions: string[];
   notices?: string[];
-  placeholders: string[];
+  placeholders?: string[];
 };
 
 const nusaPackages: TourPackage[] = [
@@ -115,7 +115,7 @@ const nusaPackages: TourPackage[] = [
     notices: [
       "Snorkeling locations are subject to weather, sea conditions, and safety considerations. Manta sightings cannot be guaranteed.",
     ],
-    placeholders: [],
+    placeholders?: [],
   },
   {
     name: "Combination West and East One-Day Island Tour",
@@ -150,11 +150,7 @@ const nusaPackages: TourPackage[] = [
     notices: [
       "The itinerary may be adjusted because of traffic, weather, harbour operations, road conditions, or safety considerations.",
     ],
-    placeholders: [
-      "CONFIRM WHETHER ALL FOUR DESTINATIONS CAN ALWAYS BE VISITED IN ONE DAY",
-      "CONFIRM HOTEL PICKUP AREAS",
-      "CONFIRM INSURANCE COVERAGE DETAILS",
-    ],
+    placeholders?: 
   },
   {
     name: "West Nusa Penida Island Tour",
@@ -436,7 +432,7 @@ const guestInformation = [
       "We will confirm availability, the final itinerary, price, inclusions, exclusions, and pickup details in writing.",
       "A 30% deposit is required to confirm the reservation. The remaining balance is due on the day of the trip.",
       "Messages are answered during business hours, 9:00 AM–9:00 PM Bali time (WITA).",
-      "[ADD BOOKING CONFIRMATION DOCUMENT OR REFERENCE PROCESS]",
+     
     ],
   },
   {
@@ -1327,12 +1323,12 @@ export default function Home() {
             <span className="trustIcon">01</span>
             <h3>Guest reviews</h3>
             <p>No testimonials have been invented or published without a source.</p>
-            <b>[ADD VERIFIED GUEST REVIEWS AND REVIEW-PLATFORM LINKS]</b>
+            
           </article>
           <article>
             <span className="trustIcon">02</span>
             <h3>Local perspective</h3>
-            <p>Chelyn plans each route around the guest’s timing, interests, comfort, and safety needs.</p>
+            <p>We plans each route around the guest’s timing, interests, comfort, and safety needs.</p>
           
           </article>
           <article>
@@ -1542,7 +1538,7 @@ export default function Home() {
                   required
                   value={tripInterest}
                   onChange={(event) => setTripInterest(event.target.value)}
-                  placeholder="Places or package you are interested in"
+                  placeholder?="Places or package you are interested in"
                 />
               </label>
               <label>
