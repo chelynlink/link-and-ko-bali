@@ -122,6 +122,7 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,499,000",
     priceBasis: "Per person",
     starting: true,
+    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Island sightseeing", "Beach and viewpoint stops", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car in Nusa Penida are listed as included.",
     meals: "À la carte lunch and mineral water are listed as included.",
@@ -154,6 +155,7 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,350,000",
     priceBasis: "Per person",
     childDiscount: "20% discount for children aged 0–3 years",
+    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Island sightseeing", "Beach and cliff viewpoints", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car with fuel are listed as included.",
     meals: "Restaurant lunch and mineral water are listed as included.",
@@ -185,6 +187,7 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,450,000",
     priceBasis: "Per person",
     childDiscount: "20% discount for children aged 0–3 years",
+    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Island sightseeing", "Beach and viewpoint stops", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car with fuel are listed as included.",
     meals: "Restaurant lunch and mineral water are listed as included.",
@@ -216,6 +219,7 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,650,000",
     priceBasis: "Per person",
     childDiscount: "20% discount for children aged 0–3 years",
+    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Snorkeling", "Island sightseeing", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car with fuel are listed as included.",
     meals: "Restaurant lunch and mineral water are listed as included.",
@@ -258,13 +262,13 @@ const seranganPackage: TourPackage = {
   badge: "Daily Departure",
   departure: "Serangan Harbour → private jetty in Nusa Penida",
   priceBasis: "Private package price shown for one guest",
-  guestRange: "One guest at the displayed price; pricing for two or more guests confirmed on WhatsApp.",
+  guestRange: "One guest at the displayed price; pricing for two or more guests must be confirmed.",
   availability: "Daily departure",
   activities: ["Island sightseeing", "Lunch", "Beach-club access"],
-  transport: "Return boat ticket and a private car in Nusa Penida are included.",
+  transport: "Return boat ticket and a private car in Nusa Penida are included. Hotel transfer is not yet confirmed.",
   meals: "Lunch is listed as included.",
   tickets: "Nusa Penida entrance fee is listed as included.",
-  guide: "A driver or guide is not specifically listed and can be confirmed on WhatsApp.",
+  guide: "A driver or guide is not specifically listed and must be confirmed.",
   destinationsTitle: "Suggested itinerary",
   destinations: [
     "Departure from Serangan Harbour",
@@ -287,7 +291,7 @@ const seranganPackage: TourPackage = {
   ],
   notices: [
     "This price is for a private package for one guest.",
-    "Water sports are available at the beach club. Message us on WhatsApp to confirm current access terms.",
+    "Water sports are available at the beach club. Complimentary access is not confirmed.",
   ],
 };
 
@@ -335,7 +339,7 @@ const faqs = [
   ],
   [
     "Are the tours private?",
-    "Private land transportation is available where it is specifically listed. Fast boats and some activities may be shared. Message us on WhatsApp to confirm which packages are fully private for your dates.",
+    "Private land transportation is available where it is specifically listed. Fast boats and some activities may be shared. Message us on WhatsApp to confirm which package you're considering.",
   ],
   [
     "What is included in the price?",
@@ -347,7 +351,7 @@ const faqs = [
   ],
   [
     "Is transportation included?",
-    "It depends on the package. Only transportation specifically listed under Inclusions is included. Hotel pickup areas and exact meeting points are confirmed after booking.",
+    "It depends on the package. Only transportation specifically listed under Inclusions is included. Hotel pickup areas and exact meeting points may still require confirmation.",
   ],
   [
     "Where will I be picked up?",
@@ -355,7 +359,7 @@ const faqs = [
   ],
   [
     "Can children join?",
-    "Children may join suitable tours under adult supervision. Some Nusa Penida packages list a 20% discount for children aged 0–3. Message us on WhatsApp for child-seat availability and age requirements for specific activities.",
+    "Children may join suitable tours under adult supervision. Some Nusa Penida packages list a 20% discount for children aged 0–3. Message us on WhatsApp with your children's ages so we can confirm suitability.",
   ],
   [
     "Are the tours suitable for elderly guests?",
@@ -363,15 +367,15 @@ const faqs = [
   ],
   [
     "What happens during bad weather?",
-    "Routes, activities, or departure points may change for safety. Message us on WhatsApp for details on rescheduling and refunds in the event of bad weather.",
+    "Routes, activities, or departure points may change for safety. Message us on WhatsApp and we'll walk you through the current plan for your specific trip.",
   ],
   [
     "What should I wear?",
-    "Wear suitable clothing and secure footwear for the selected activities. Bring sun protection and any personal medication. Package-specific equipment requirements can be confirmed on WhatsApp.",
+    "Wear suitable clothing and secure footwear for the selected activities. Bring sun protection and any personal medication. Package-specific equipment requirements must be confirmed before departure.",
   ],
   [
     "Do I need travel insurance?",
-    "Travel insurance is recommended and is currently the guest's own responsibility to arrange. Message us on WhatsApp if you have questions about a specific package.",
+    "We recommend that all guests arrange their own travel insurance before the trip. Message us on WhatsApp if you have questions about your specific package.",
   ],
   [
     "Can you accommodate dietary restrictions?",
@@ -383,7 +387,7 @@ const faqs = [
   ],
   [
     "What is the cancellation policy?",
-    "The deposit is refundable when cancellation is made more than 72 hours before the trip. Within 72 hours, the deposit is non-refundable. Rescheduling is allowed subject to availability; message us on WhatsApp to confirm any rescheduling fee or deadline.",
+    "The deposit is refundable when cancellation is made more than 72 hours before the trip. Within 72 hours, the deposit is non-refundable. Rescheduling is allowed subject to availability; message us on WhatsApp to confirm any fee or deadline.",
   ],
   [
     "How quickly will I receive my custom plan?",
@@ -404,7 +408,7 @@ const safetyItems = [
   "The operator may refuse participation when a guest’s health, condition, or behaviour creates a safety risk.",
   "Guests are responsible for personal belongings unless otherwise required by applicable law.",
   "Emergency contact during the tour: Chelyn, +62 858-2375-4807.",
-  "Travel insurance is recommended and is currently the guest's own responsibility to arrange unless stated otherwise in your written quotation.",
+  "Travel insurance is recommended.",
 ];
 
 const guestInformation = [
@@ -465,10 +469,6 @@ function TourCard({
   tour: TourPackage;
   onRequest: (name: string) => void;
 }) {
-  const hasFacts =
-    tour.duration || tour.startFinish || tour.priceBasis || tour.guestRange || tour.availability;
-  const hasReadiness = tour.clothing || tour.activityLevel || tour.ageRestrictions;
-
   return (
     <Translated><article className="tourCard">
       <div className="tourTop">
@@ -490,16 +490,14 @@ function TourCard({
           <b>Departure:</b> {tour.departure}
         </p>
       )}
-      {hasFacts && (
-        <div className="tourFacts" aria-label={`${tour.name} key details`}>
-          <div><small>Main destination</small><strong>{tour.mainDestination}</strong></div>
-          {tour.duration && <div><small>Duration</small><strong>{tour.duration}</strong></div>}
-          {tour.startFinish && <div><small>Start and finish</small><strong>{tour.startFinish}</strong></div>}
-          {tour.priceBasis && <div><small>Price basis</small><strong>{tour.priceBasis}</strong></div>}
-          {tour.guestRange && <div><small>Guest numbers</small><strong>{tour.guestRange}</strong></div>}
-          {tour.availability && <div><small>Availability</small><strong>{tour.availability}</strong></div>}
-        </div>
-      )}
+      <div className="tourFacts" aria-label={`${tour.name} key details`}>
+        <div><small>Main destination</small><strong>{tour.mainDestination}</strong></div>
+        {tour.duration && <div><small>Duration</small><strong>{tour.duration}</strong></div>}
+        {tour.startFinish && <div><small>Start and finish</small><strong>{tour.startFinish}</strong></div>}
+        {tour.priceBasis && <div><small>Price basis</small><strong>{tour.priceBasis}</strong></div>}
+        {tour.guestRange && <div><small>Guest numbers</small><strong>{tour.guestRange}</strong></div>}
+        {tour.availability && <div><small>Availability</small><strong>{tour.availability}</strong></div>}
+      </div>
       <div className="tourDetails">
         {tour.destinations && (
           <div>
@@ -532,7 +530,7 @@ function TourCard({
         <div><b>Entrance tickets</b><span>{tour.tickets}</span></div>
         <div><b>Driver / guide</b><span>{tour.guide}</span></div>
       </div>
-      {hasReadiness && (
+      {(tour.clothing || tour.activityLevel || tour.ageRestrictions) && (
         <div className="readinessGrid">
           {tour.clothing && <div><b>Recommended clothing / equipment</b><span>{tour.clothing}</span></div>}
           {tour.activityLevel && <div><b>Physical activity level</b><span>{tour.activityLevel}</span></div>}
@@ -548,9 +546,6 @@ function TourCard({
           {notice}
         </p>
       ))}
-      <p className="askNote">
-        Have a question about this package? <a href="#contact">Ask us on WhatsApp</a>.
-      </p>
       <button className="btn primary requestBtn" onClick={() => onRequest(tour.name)}>
         Request This Package <Arrow />
       </button>
@@ -1098,9 +1093,6 @@ export default function Home() {
                   <b>Not included</b>
                   <span>Full-day private car, hotel transfer, fuel, or a separate driver outside the jeep service.</span>
                 </div>
-                <p className="askNote">
-                  Have a question about timing or requirements? <a href="#contact">Ask us on WhatsApp</a>.
-                </p>
                 <button className="btn ghost" onClick={() => requestPackage(trip.name)}>
                   Request This Package <Arrow />
                 </button>
@@ -1208,10 +1200,6 @@ export default function Home() {
                 <strong>Allowed, subject to availability.</strong>
               </div>
             </div>
-            <p className="askNote">
-              Have a question about rescheduling fees or deadlines?{" "}
-              <a href={activeWhatsAppUrl} target="_blank" rel="noreferrer">Ask us on WhatsApp</a>.
-            </p>
           </article>
         </div>
       </section>
@@ -1224,8 +1212,8 @@ export default function Home() {
               <h2>Know what to expect before you book.</h2>
             </div>
             <p>
-              These details form the practical booking guide. Anything not covered
-              here can be confirmed directly on WhatsApp before booking.
+              These details form the practical booking guide. Questions not
+              covered here can be confirmed directly with us on WhatsApp.
             </p>
           </header>
           <div className="guestInfoGrid">
@@ -1278,8 +1266,7 @@ export default function Home() {
           <div>
             <b>Emergency and insurance</b>
             <span>
-              Emergency: Chelyn, +62 858-2375-4807. Travel insurance is recommended and is
-              currently the guest's own responsibility to arrange.
+              Emergency: Chelyn, +62 858-2375-4807. Travel insurance is recommended; confirm any package-specific coverage in writing before booking.
             </span>
           </div>
         </div>
@@ -1305,7 +1292,7 @@ export default function Home() {
           <article>
             <span className="trustIcon">02</span>
             <h3>Local perspective</h3>
-            <p>Chelyn plans each route around the guest’s timing, interests, comfort, and safety needs.</p>
+            <p>We plan each route around the guest’s timing, interests, comfort, and safety needs.</p>
           </article>
           <article>
             <span className="trustIcon">03</span>
