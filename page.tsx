@@ -8,24 +8,31 @@ import {
   translateText,
 } from "./i18n";
 
-const WHATSAPP_URL =
-  "https://wa.me/6285959313339?text=Hi%20Chelyn%2C%20I%20found%20Link%20%26%20Ko%20Bali%20and%20would%20like%20to%20plan%20a%20trip.";
+const WHATSAPP_NUMBER = "6285959313339";
 
-const ERIKO_WHATSAPP_URL =
-  "https://wa.me/6289636867215?text=Halo%20Eriko%2C%20saya%20menemukan%20Link%20%26%20Ko%20Bali%20dan%20ingin%20merencanakan%20perjalanan%20di%20Bali.";
+const WHATSAPP_URL =
+  `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+  encodeURIComponent("Hi Eriko, I found Link & Ko Bali and would like to plan a trip.");
+
+const ID_WHATSAPP_URL =
+  `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+  encodeURIComponent("Halo Eriko, saya menemukan Link & Ko Bali dan ingin merencanakan perjalanan di Bali.");
 
 const CHINESE_WHATSAPP_URL =
-  "https://wa.me/6285959313339?text=%E4%BD%A0%E5%A5%BD%20Chelyn%EF%BC%8C%E6%88%91%E5%9C%A8%20Link%20%26%20Ko%20Bali%20%E7%BD%91%E7%AB%99%E4%B8%8A%E7%9C%8B%E5%88%B0%E4%BD%A0%E4%BB%AC%EF%BC%8C%E6%83%B3%E5%92%A8%E8%AF%A2%E5%B7%B4%E5%8E%98%E5%B2%9B%E8%A1%8C%E7%A8%8B%E3%80%82";
+  `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+  encodeURIComponent("你好 Eriko，我在 Link & Ko Bali 网站上看到你们，想咨询巴厘岛行程。");
 
 const RUSSIAN_WHATSAPP_URL =
-  "https://wa.me/6285959313339?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20Chelyn!%20%D0%AF%20%D0%BD%D0%B0%D1%88%D1%91%D0%BB(%D0%BB%D0%B0)%20Link%20%26%20Ko%20Bali%20%D0%B8%20%D1%85%D0%BE%D1%87%D1%83%20%D1%81%D0%BF%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D1%83%20%D0%BF%D0%BE%20%D0%91%D0%B0%D0%BB%D0%B8.";
+  `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+  encodeURIComponent("Здравствуйте, Eriko! Я нашёл(ла) Link & Ko Bali и хочу спланировать поездку по Бали.");
 
 const JAPANESE_WHATSAPP_URL =
-  "https://wa.me/6285959313339?text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AFChelyn%E3%80%82Link%20%26%20Ko%20Bali%E3%81%AE%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E8%A6%8B%E3%81%A6%E3%80%81%E3%83%90%E3%83%AA%E6%97%85%E8%A1%8C%E3%81%AE%E7%9B%B8%E8%AB%87%E3%82%92%E3%81%97%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82";
+  `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+  encodeURIComponent("こんにちはEriko。Link & Ko Baliのウェブサイトを見て、バリ旅行の相談をしたいです。");
 
 const KOREAN_WHATSAPP_URL =
-  "https://wa.me/6285959313339?text=" +
-  encodeURIComponent("안녕하세요 Chelyn. Link & Ko Bali 웹사이트를 보고 발리 여행을 상담하고 싶습니다.");
+  `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+  encodeURIComponent("안녕하세요 Eriko. Link & Ko Bali 웹사이트를 보고 발리 여행을 상담하고 싶습니다.");
 
 const transportServices = [
   {
@@ -335,79 +342,79 @@ const jeepPackages = [
 const faqs = [
   [
     "Can I customize a tour?",
-    "Yes. Share your preferred destinations, dates, available time, group size, interests, budget, and any special requirements. We will prepare a suitable plan and confirm the final details in writing.",
+    "Yes. Share your preferred destinations, dates, group size, and budget, and we'll prepare a plan and confirm the details in writing.",
   ],
   [
     "Are the tours private?",
-    "Private land transportation is available where it is specifically listed. Fast boats and some activities may be shared. Message us on WhatsApp to confirm which package you're considering.",
+    "Private land transport is available where it's listed. Fast boats and some activities may be shared. Message us on WhatsApp to confirm your specific package.",
   ],
   [
     "What is included in the price?",
-    "Each package card lists its confirmed inclusions. Your written quotation will confirm transportation, meals, tickets, guide service, and any other inclusions before payment.",
+    "Each package card lists its confirmed inclusions. Your written quotation confirms everything before payment.",
   ],
   [
     "Are there additional charges?",
-    "Unless specifically included, parking, toll-road fees, meals, activities, and entrance tickets are paid separately by the guest. Any other extra cost must be confirmed in the written quotation.",
+    "Unless specifically included, parking, toll fees, meals, activities, and entrance tickets are paid separately by the guest.",
   ],
   [
     "Is transportation included?",
-    "It depends on the package. Only transportation specifically listed under Inclusions is included. Hotel pickup areas and exact meeting points may still require confirmation.",
+    "It depends on the package. Only what's listed under Inclusions is included. Pickup areas may still need confirming.",
   ],
   [
     "Where will I be picked up?",
-    "Enter your hotel or pickup location in the request form. We will confirm the pickup point, coverage area, and any extra transfer cost before your booking is confirmed.",
+    "Enter your hotel in the request form. We'll confirm the pickup point and any extra cost before booking.",
   ],
   [
     "Can children join?",
-    "Children may join suitable tours under adult supervision. Some Nusa Penida packages list a 20% discount for children aged 0–3. Message us on WhatsApp with your children's ages so we can confirm suitability.",
+    "Yes, under adult supervision. Some Nusa Penida packages offer a 20% discount for children aged 0–3. Message us with your children's ages so we can confirm suitability.",
   ],
   [
     "Are the tours suitable for elderly guests?",
-    "Suitability depends on the route, access conditions, and the guest’s mobility and health. Disclose any mobility or medical requirements so we can assess the itinerary before confirmation.",
+    "It depends on the route and access conditions. Let us know about any mobility needs so we can advise before you book.",
   ],
   [
     "What happens during bad weather?",
-    "Routes, activities, or departure points may change for safety. Message us on WhatsApp and we'll walk you through the current plan for your specific trip.",
+    "Routes or activities may change for safety. Message us on WhatsApp and we'll walk you through the plan for your trip.",
   ],
   [
     "What should I wear?",
-    "Wear suitable clothing and secure footwear for the selected activities. Bring sun protection and any personal medication. Package-specific equipment requirements must be confirmed before departure.",
+    "Comfortable clothing, secure footwear, and sun protection. We'll confirm any activity-specific gear before departure.",
   ],
   [
     "Do I need travel insurance?",
-    "We recommend that all guests arrange their own travel insurance before the trip. Message us on WhatsApp if you have questions about your specific package.",
+    "We recommend arranging your own travel insurance before the trip. Message us on WhatsApp if you have questions.",
   ],
   [
     "Can you accommodate dietary restrictions?",
-    "Tell us about allergies, dietary restrictions, or preferences in the request form. We will confirm what can be accommodated before the trip.",
+    "Tell us in the request form and we'll confirm what can be accommodated.",
   ],
   [
     "How do I pay?",
-    "A 30% deposit confirms the reservation. The remaining balance is due on the trip day. Accepted methods are bank transfer, cash, card, and QRIS. Bank transfers must go only to the official Bank Mandiri account shown on this website.",
+    "A 30% deposit confirms your booking; the balance is due on the trip day. Bank transfer, cash, card, or QRIS accepted. Bank transfers go only to the official Bank Mandiri account shown on this website.",
   ],
   [
     "What is the cancellation policy?",
-    "The deposit is refundable when cancellation is made more than 72 hours before the trip. Within 72 hours, the deposit is non-refundable. Refunds are processed within 3 business days. Rescheduling is allowed subject to availability; message us on WhatsApp to confirm any fee or deadline.",
+    "Cancel more than 72 hours before the trip and your deposit is refundable. Within 72 hours it's non-refundable. Refunds are processed within 3 business days. Rescheduling is subject to availability.",
   ],
   [
     "How quickly will I receive my custom plan?",
-    "We review requests and reply through WhatsApp or email during business hours, 9:00 AM–9:00 PM Bali time (WITA).",
+    "We reply through WhatsApp or email during business hours, 9:00 AM–9:00 PM Bali time (WITA).",
   ],
 ];
 
 const safetyItems = [
-  "Guests must follow the instructions of the driver, guide, boat crew, activity operator, and local authorities.",
+  "Follow the instructions of the driver, guide, boat crew, activity operator, and local authorities.",
   "Tour schedules and destinations may change because of weather, sea conditions, traffic, road conditions, harbour operations, volcanic activity, government restrictions, or other safety concerns.",
-  "Guests must disclose relevant medical conditions, allergies, injuries, pregnancy, mobility limitations, or other health concerns before participating.",
-  "Guests must bring their own personal medication.",
+  "Disclose relevant medical conditions, allergies, injuries, pregnancy, mobility limitations, or other health concerns before participating.",
+  "Bring your own personal medication.",
   "Children must remain under the supervision of a parent or responsible adult.",
-  "Guests should wear suitable clothing and footwear for the selected activities.",
+  "Wear suitable clothing and footwear for the selected activities.",
   "Safety equipment must be worn when required.",
   "Alcohol use or unsafe behaviour may result in removal from an activity.",
   "Snorkeling locations and manta sightings cannot be guaranteed.",
-  "The operator may refuse participation when a guest’s health, condition, or behaviour creates a safety risk.",
+  "We may refuse participation when a guest's health, condition, or behaviour creates a safety risk.",
   "Guests are responsible for personal belongings unless otherwise required by applicable law.",
-  "Emergency contact during the tour: Chelyn, +62 858-2375-4807.",
+  "In an emergency during the tour, message us on WhatsApp immediately.",
   "Travel insurance is recommended.",
 ];
 
@@ -415,32 +422,32 @@ const guestInformation = [
   {
     title: "Booking and confirmation",
     items: [
-      "Submit a package or custom-tour request through the form or official WhatsApp number.",
-      "We will confirm availability, the final itinerary, price, inclusions, exclusions, and pickup details in writing.",
-      "A 30% deposit is required to confirm the reservation. The remaining balance is due on the day of the trip.",
+      "Submit a package or custom-tour request through the form or WhatsApp.",
+      "We confirm availability, itinerary, price, and inclusions in writing.",
+      "A 30% deposit confirms your reservation. The balance is due on the day of the trip.",
       "Messages are answered during business hours, 9:00 AM–9:00 PM Bali time (WITA).",
     ],
   },
   {
     title: "Changes, refunds, and timing",
     items: [
-      "Cancellation more than 72 hours before the trip: the deposit is refundable.",
-      "Cancellation within 72 hours: the deposit is non-refundable.",
-      "Refunds are processed within 3 business days, and our team is reachable 9:00 AM–9:00 PM Bali time (WITA) for any questions during that time.",
+      "Cancellation more than 72 hours before the trip: deposit refundable.",
+      "Cancellation within 72 hours: deposit non-refundable.",
+      "Refunds are processed within 3 business days, 9:00 AM–9:00 PM Bali time (WITA).",
       "Rescheduling is allowed, subject to availability.",
     ],
   },
   {
     title: "Pickup and preparation",
     items: [
-      "The exact pickup point and departure details will be confirmed after booking.",
-      "Bring suitable clothing and footwear, sun protection, required personal medication, and activity-specific equipment when advised.",
+      "Exact pickup point and departure details are confirmed after booking.",
+      "Bring suitable clothing, footwear, sun protection, and any personal medication.",
     ],
   },
   {
     title: "Accessibility, language, and food",
     items: [
-      "Disclose medical, mobility, pregnancy, allergy, accessibility, and dietary requirements before confirmation.",
+      "Disclose medical, mobility, pregnancy, allergy, or dietary requirements before confirmation.",
       "English, Indonesian, Simplified Chinese, Russian, Japanese, and Korean are available.",
     ],
   },
@@ -451,10 +458,9 @@ const guestInformation = [
     ],
   },
   {
-    title: "Contact and emergencies",
+    title: "Contact",
     items: [
-      "Official WhatsApp and phone: +62 859-5931-3339.",
-      "Emergency contact: Chelyn, +62 858-2375-4807.",
+      "Official WhatsApp: +62 859-5931-3339 (Eriko).",
       "Business hours: 9:00 AM–9:00 PM Bali time (WITA).",
       "Messages are answered during business hours.",
     ],
@@ -597,7 +603,7 @@ export default function Home() {
       `Acara khusus: ${form.get("occasion") || "Tidak ada"}`,
       `Permintaan tambahan: ${form.get("requests") || "Tidak ada"}`,
     ] : language === "zh" ? [
-      "你好 Chelyn，我在 Link & Ko Bali 网站上看到你们，想申请定制巴厘岛行程。",
+      "你好 Eriko，我在 Link & Ko Bali 网站上看到你们，想申请定制巴厘岛行程。",
       "",
       `姓名：${form.get("fullName") || ""}`,
       `WhatsApp：${form.get("whatsapp") || ""}`,
@@ -617,7 +623,7 @@ export default function Home() {
       `特别纪念日：${form.get("occasion") || "无"}`,
       `其他需求：${form.get("requests") || "无"}`,
     ] : language === "ru" ? [
-      "Здравствуйте, Chelyn! Я нашёл(ла) Link & Ko Bali и хочу запросить индивидуальный план поездки.",
+      "Здравствуйте, Eriko! Я нашёл(ла) Link & Ko Bali и хочу запросить индивидуальный план поездки.",
       "",
       `Имя: ${form.get("fullName") || ""}`,
       `WhatsApp: ${form.get("whatsapp") || ""}`,
@@ -637,7 +643,7 @@ export default function Home() {
       `Особое событие: ${form.get("occasion") || "Нет"}`,
       `Дополнительные пожелания: ${form.get("requests") || "Нет"}`,
     ] : language === "ja" ? [
-      "こんにちはChelyn。Link & Ko Baliのウェブサイトを見て、カスタム旅行プランを依頼したいです。",
+      "こんにちはEriko。Link & Ko Baliのウェブサイトを見て、カスタム旅行プランを依頼したいです。",
       "",
       `氏名：${form.get("fullName") || ""}`,
       `WhatsApp：${form.get("whatsapp") || ""}`,
@@ -657,7 +663,7 @@ export default function Home() {
       `特別な日：${form.get("occasion") || "なし"}`,
       `その他のご要望：${form.get("requests") || "なし"}`,
     ] : language === "ko" ? [
-      "안녕하세요 Chelyn. Link & Ko Bali 웹사이트를 보고 맞춤 발리 여행 플랜을 요청하고 싶습니다.",
+      "안녕하세요 Eriko. Link & Ko Bali 웹사이트를 보고 맞춤 발리 여행 플랜을 요청하고 싶습니다.",
       "",
       `성명: ${form.get("fullName") || ""}`,
       `WhatsApp: ${form.get("whatsapp") || ""}`,
@@ -677,7 +683,7 @@ export default function Home() {
       `특별한 날: ${form.get("occasion") || "없음"}`,
       `추가 요청: ${form.get("requests") || "없음"}`,
     ] : [
-      "Hi Chelyn, I found Link & Ko Bali and would like to request a custom trip plan.",
+      "Hi Eriko, I found Link & Ko Bali and would like to request a custom trip plan.",
       "",
       `Name: ${form.get("fullName") || ""}`,
       `WhatsApp: ${form.get("whatsapp") || ""}`,
@@ -698,7 +704,7 @@ export default function Home() {
       `Additional requests: ${form.get("requests") || "None"}`,
     ];
     window.open(
-      `https://wa.me/${language === "id" ? "6289636867215" : "6285959313339"}?text=${encodeURIComponent(lines.join("\n"))}`,
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`,
       "_blank",
       "noopener,noreferrer",
     );
@@ -706,7 +712,7 @@ export default function Home() {
   }
 
   const activeWhatsAppUrl = language === "id"
-    ? ERIKO_WHATSAPP_URL
+    ? ID_WHATSAPP_URL
     : language === "zh"
       ? CHINESE_WHATSAPP_URL
       : language === "ru"
@@ -809,7 +815,7 @@ export default function Home() {
             </button>
           </div>
           <a className="navCta" href={activeWhatsAppUrl} target="_blank" rel="noreferrer">
-            Chat on WhatsApp <Arrow />
+            Chat with Eriko <Arrow />
           </a>
         </div>
       </nav>
@@ -824,10 +830,9 @@ export default function Home() {
           <em>your way.</em>
         </h1>
         <p>
-          Thoughtful private driving and personalized day tours created to help
-          women feel safe and supported. Couples, male travellers, Indonesian
-          and international guests, and groups of four or more are also welcome,
-          with vehicles arranged to suit the group.
+          Private driving and day tours designed to help women travel safely
+          and comfortably. Couples, families, and larger groups are also
+          welcome — we arrange the right vehicle for your group.
         </p>
         <div className="actions">
           <a className="btn primary" href="#custom-trip">
@@ -840,7 +845,7 @@ export default function Home() {
         <div className="heroPhoto" role="img" aria-label="Aerial view of Kelingking Beach, Nusa Penida">
           <div className="heroPhotoCard">
             <span>Nusa Penida · Bali</span>
-            <strong>Travel confidently with Chelyn</strong>
+            <strong>Travel Bali with confidence</strong>
           </div>
           <div className="heroPhotoBadge">
             <span>Women-first care</span>
@@ -870,18 +875,14 @@ export default function Home() {
           </h2>
           <div>
             <p>
-              Link & Ko Bali is designed especially for women who want to feel
-              comfortable and supported while exploring Bali. The service is
-              also open to couples, male travellers, Indonesian and international
-              guests, and groups from four people. A suitable vehicle can be
-              arranged by request for larger groups.
+              Link & Ko Bali is built around women-first comfort, but every
+              traveller is welcome — couples, families, and larger groups
+              included. We arrange the right vehicle for your group.
             </p>
             <p>
-              Private land transportation is available where specifically
-              stated. Fast boats and some activities may be shared. Before
-              payment, we confirm availability, the itinerary, final price,
-              service format, inclusions, exclusions, and important conditions
-              in writing.
+              Land transport is private unless stated otherwise; boats and
+              some activities may be shared. We confirm your itinerary,
+              price, and inclusions in writing before you pay.
             </p>
             <div className="aboutPoints">
               <span><b>Flexible</b> Choose a package or build a custom day.</span>
@@ -1211,8 +1212,7 @@ export default function Home() {
               <h2>Know what to expect before you book.</h2>
             </div>
             <p>
-              These details form the practical booking guide. Questions not
-              covered here can be confirmed directly with us on WhatsApp.
+              Questions not covered here can be confirmed directly on WhatsApp.
             </p>
           </header>
           <div className="guestInfoGrid">
@@ -1265,7 +1265,9 @@ export default function Home() {
           <div>
             <b>Emergency and insurance</b>
             <span>
-              Emergency: Chelyn, +62 858-2375-4807. Travel insurance is recommended; confirm any package-specific coverage in writing before booking.
+              In an emergency, message us on WhatsApp immediately. Travel
+              insurance is recommended; confirm any package-specific coverage
+              in writing before booking.
             </span>
           </div>
         </div>
@@ -1291,7 +1293,7 @@ export default function Home() {
           <article>
             <span className="trustIcon">02</span>
             <h3>Local perspective</h3>
-            <p>We plan each route around the guest’s timing, interests, comfort, and safety needs.</p>
+            <p>We plan each route around the guest's timing, interests, comfort, and safety needs.</p>
           </article>
           <article>
             <span className="trustIcon">03</span>
@@ -1315,16 +1317,14 @@ export default function Home() {
           </div>
           <p>
             Share your preferred destinations, schedule, group size, and
-            interests. We will create a personalized day-tour plan for you.
+            interests, and we'll create a plan for you.
           </p>
         </header>
         <div className="contactFacts">
-          <div><small>International WhatsApp</small><a href={WHATSAPP_URL} target="_blank" rel="noreferrer">Chelyn · +62 859-5931-3339</a></div>
-          <div><small>Indonesia / Tamu lokal</small><a href={ERIKO_WHATSAPP_URL} target="_blank" rel="noreferrer">Eriko · +62 896-3686-7215</a></div>
+          <div><small>WhatsApp</small><a href={WHATSAPP_URL} target="_blank" rel="noreferrer">Eriko · +62 859-5931-3339</a></div>
           <div><small>Business hours</small><strong>9:00 AM–9:00 PM Bali time (WITA)</strong></div>
           <div><small>Expected response</small><strong>Messages are answered during business hours</strong></div>
           <div><small>Service area</small><strong>Bali, including selected Nusa Penida and Kintamani services</strong></div>
-          <div><small>Emergency contact</small><strong>Chelyn · +62 858-2375-4807</strong></div>
         </div>
         <div className="connectHeading">
           <div className="label">Connect With Us</div>
@@ -1360,10 +1360,7 @@ export default function Home() {
           ))}
         </div>
         <a className="btn primary connectWhatsapp" href={activeWhatsAppUrl} target="_blank" rel="noreferrer">
-          Chat on WhatsApp <Arrow />
-        </a>
-        <a className="btn ghost localWhatsapp" href={ERIKO_WHATSAPP_URL} target="_blank" rel="noreferrer">
-          Tamu Indonesia: Chat Eriko <Arrow />
+          Chat with Eriko <Arrow />
         </a>
       </section>
 
@@ -1375,7 +1372,7 @@ export default function Home() {
             <br />
             make a request.
           </h2>
-          <p>Anything not covered here can be confirmed directly with Chelyn.</p>
+          <p>Anything else? Message us on WhatsApp.</p>
         </div>
         <div className="faqList">
           {faqs.map((item, index) => (
@@ -1407,8 +1404,8 @@ export default function Home() {
             </h2>
             <p>
               Every guest travels differently. Tell us your preferred
-              destinations, available dates, group size, interests, and budget.
-              We will help arrange a personalized itinerary based on your needs.
+              destinations, dates, group size, and budget, and we'll arrange a
+              plan based on your needs.
             </p>
             <div className="planningList">
               {[
@@ -1422,7 +1419,7 @@ export default function Home() {
             </div>
             <div className="reply">Messages are answered from 9:00 AM to 9:00 PM Bali time (WITA).</div>
             <a className="textLink" href={activeWhatsAppUrl} target="_blank" rel="noreferrer">
-              Chat on WhatsApp <Arrow />
+              Chat with Eriko <Arrow />
             </a>
           </div>
           {sent ? (
@@ -1564,18 +1561,18 @@ export default function Home() {
       <section className="finalCta">
         <div className="shell">
           <div className="label">Ready to Plan Your Bali Experience?</div>
-          <h2>Let’s turn your list into a realistic Bali plan.</h2>
+          <h2>Let's turn your list into a realistic Bali plan.</h2>
           <p>
             Tell us where you would like to go, how many people are travelling,
-            and your preferred budget. We will help create a suitable plan for
-            your Bali trip.
+            and your preferred budget, and we'll help create a plan for your
+            trip.
           </p>
           <div className="actions">
             <a className="btn primary" href="#custom-trip">
               Request a Custom Plan <Arrow />
             </a>
             <a className="btn ghost" href={activeWhatsAppUrl} target="_blank" rel="noreferrer">
-              Chat on WhatsApp
+              Chat with Eriko
             </a>
           </div>
         </div>
@@ -1593,7 +1590,7 @@ export default function Home() {
         <p>
           Bali, Indonesia
           <br />
-          Private trips with Chelyn.
+          Private trips, planned with care.
         </p>
         <div>
           <a href="#top">Home</a>
@@ -1605,9 +1602,9 @@ export default function Home() {
         </div>
         <small>© 2026 Link & Ko Bali</small>
       </footer>
-      <a className="chat" href={activeWhatsAppUrl} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+      <a className="chat" href={activeWhatsAppUrl} target="_blank" rel="noreferrer" aria-label="Chat with Eriko">
         <span>✦</span>
-        <b>Chat on WhatsApp</b>
+        <b>Chat with Eriko</b>
       </a>
     </main></Translated>
     </LanguageContext.Provider>
