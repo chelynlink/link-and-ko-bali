@@ -129,7 +129,6 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,499,000",
     priceBasis: "Per person",
     starting: true,
-    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Island sightseeing", "Beach and viewpoint stops", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car in Nusa Penida are listed as included.",
     meals: "À la carte lunch and mineral water are listed as included.",
@@ -162,7 +161,6 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,350,000",
     priceBasis: "Per person",
     childDiscount: "20% discount for children aged 0–3 years",
-    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Island sightseeing", "Beach and cliff viewpoints", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car with fuel are listed as included.",
     meals: "Restaurant lunch and mineral water are listed as included.",
@@ -194,7 +192,6 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,450,000",
     priceBasis: "Per person",
     childDiscount: "20% discount for children aged 0–3 years",
-    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Island sightseeing", "Beach and viewpoint stops", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car with fuel are listed as included.",
     meals: "Restaurant lunch and mineral water are listed as included.",
@@ -226,7 +223,6 @@ const nusaPackages: TourPackage[] = [
     price: "IDR 1,650,000",
     priceBasis: "Per person",
     childDiscount: "20% discount for children aged 0–3 years",
-    departure: "[CONFIRM DEPARTURE HARBOUR]",
     activities: ["Snorkeling", "Island sightseeing", "Lunch"],
     transport: "Hotel transfer, return fast boat, and a private car with fuel are listed as included.",
     meals: "Restaurant lunch and mineral water are listed as included.",
@@ -888,7 +884,7 @@ export default function Home() {
           <div>
             <p>
               Link & Ko Bali is built around women-first comfort, but every
-              traveller is welcome — couples, families, and larger groups
+              traveller is welcome couples, families, and larger groups
               included. We arrange the right vehicle for your group.
             </p>
             <p>
