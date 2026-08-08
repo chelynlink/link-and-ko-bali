@@ -726,6 +726,18 @@ export default function Home() {
   return (
     <LanguageContext.Provider value={language}>
     <Translated><main>
+      <style jsx global>{`
+        html, body {
+          overflow-x: hidden;
+          width: 100%;
+          position: relative;
+        }
+        .languageSwitch {
+          flex-wrap: wrap;
+          max-width: 100%;
+          row-gap: 4px;
+        }
+      `}</style>
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Link & Ko Bali home">
           <img
