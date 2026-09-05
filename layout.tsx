@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Link & Ko Bali | Private Female Driver & Travel Companion",
-  description: "Explore Bali with Chelyn—private transport, flexible itineraries, photo assistance and thoughtful comfort.",
+  title: "Link & Ko Bali | Drivers, Car Rental & Bali Trips",
+  description: "Personal Bali transportation and selected trips. Arrange private drivers, car rental, airport transfers, Nusa Penida and Mount Batur jeep experiences.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

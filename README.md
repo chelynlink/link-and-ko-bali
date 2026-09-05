@@ -7,7 +7,8 @@ Production-ready source code for the Link & Ko Bali website.
 - Responsive website for desktop and mobile
 - English as the default language
 - Indonesian, Simplified Chinese, Russian, Japanese, and Korean
-- Tour packages, private transportation, safety information, FAQ, and contact forms
+- Car rental, private driver, airport transfer, Nusa Penida, Kintamani jeep, and custom trip content
+- Short FAQ and a WhatsApp trip-request form
 - WhatsApp contact routing and all current destination images
 
 ## Local development
